@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <include layout="@layout/layout_xian" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="新密码"
+            android:textSize="25dp"
+            android:paddingRight="20dp"
+            android:layout_height="80dp" />
+        <EditText
+            android:id="@+id/setpas_password"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="80dp"
+            android:background="#00000000"
+            android:digits="1234567890abcdefghijklmnopqrstuvwxyz.+-*ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:gravity="center|left"
+            android:hint="登录密码"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:password="true"
+            android:textSize="25dp" />
+        <ImageView
+            android:id="@+id/setpas_passwordnull"
+            android:src="@mipmap/errer3"
+            android:paddingRight="20dp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp" />
+        <ImageView
+            android:id="@+id/setpas_passwordsee"
+            android:src="@mipmap/see3"
+            android:paddingRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_xian" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="重复密码"
+            android:textSize="25dp"
+            android:paddingRight="20dp"
+            android:layout_height="80dp" />
+        <EditText
+            android:id="@+id/setpas_passwordagain"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="80dp"
+            android:background="#00000000"
+            android:digits="1234567890abcdefghijklmnopqrstuvwxyz.+-*ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:gravity="center|left"
+            android:hint="确认登录密码"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:password="true"
+            android:textSize="25dp" />
+        <ImageView
+            android:id="@+id/setpas_passwordagainnull"
+            android:src="@mipmap/errer3"
+            android:visibility="gone"
+            android:paddingRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp" />
+        <ImageView
+            android:id="@+id/setpas_passwordagainsee"
+            android:src="@mipmap/see3"
+            android:paddingRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_xian" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <include layout="@layout/layout_xian" />
+
+    <Button
+        android:id="@+id/setpasbut_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/buttonshapegray"
+        android:enabled="false"
+        android:text="确定"
+        android:textColor="@color/colorWhite"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+</LinearLayout>

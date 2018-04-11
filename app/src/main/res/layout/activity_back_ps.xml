@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/layout_title"/>
+    <include layout="@layout/layout_xian"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+    <TextView
+        android:text="我们已经将您的验证码发送至你的手机"
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/backps_phonenumber"
+        android:textSize="25dp"
+        android:text="xxxxxxxxxxxxxxx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <EditText
+            android:id="@+id/backps_PhoneMessageCode"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:digits="1234567890"
+            android:gravity="center|left"
+            android:hint="请输入验证码"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textSize="25dp" />
+
+        <TextView
+            android:layout_width="6dp"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="50dp" />
+
+        <TextView
+            android:id="@+id/backps_sendCodeAgain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:hint="发送验证码"
+            android:enabled="false"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textSize="25dp" />
+    </LinearLayout>
+    <include layout="@layout/layout_xian" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+    <Button
+        android:id="@+id/backps_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/buttonshapegray"
+        android:enabled="false"
+        android:text="下一步"
+        android:textColor="@color/colorWhite"
+        android:textSize="25dp" />
+</LinearLayout>
