@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/fy_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#f9f9f9"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btn_store"
+            style="@style/HomeTabBar"
+            android:drawableTop="@drawable/select_tabbar_ic_shop"
+            android:text="商城"/>
+
+        <Button
+            android:id="@+id/btn_near"
+            style="@style/HomeTabBar"
+            android:drawableTop="@drawable/select_tabbar_ic_near"
+            android:text="附近"/>
+
+        <TextView
+            android:id="@+id/tv_shop_car"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-20dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/tabbar_shopcar"
+            android:gravity="center"
+            android:textSize="10sp"/>
+
+        <Button
+            android:id="@+id/btn_home"
+            style="@style/HomeTabBar"
+            android:drawableTop="@drawable/select_tabbar_ic_home"
+            android:text="财富"
+            android:visibility="visible"/>
+
+        <Button
+            android:id="@+id/btn_me"
+            style="@style/HomeTabBar"
+            android:drawableTop="@drawable/select_tabbar_ic_me"
+            android:text="个人中心"/>
+
+    </LinearLayout>
+</LinearLayout>

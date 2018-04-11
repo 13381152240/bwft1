@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e83632</color>
+    <color name="colorPrimaryDark">#e83632</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="ThemeColor">#e83632</color>
+    <color name="ThemeBgColor">#f2f2f2</color>
+
+    <color name="textHintColor">#d1d1d1</color>
+
+    <color name="TextColor1">#5f6061</color>
+    <color name="TextColor2">#656565</color>
+    <color name="TextColor3">#8d909a</color>
+    <color name="textColor4">#404141</color>
+    <color name="textColor2">#232326</color>
+    <color name="priceColor">#f02b2b</color>
+    <color name="textColor1">#404141</color>
+    <color name="CirclePhotoBorderColor">#ee5d80</color>
+
+
+    <!--HomeFragement-->
+    <color name="HomeRedTextColor">#ef1a42</color>
+    <color name="HomeFenHongQaunColor">#f9752b</color>
+    <color name="HomeProgressBarBgColor">#ececec</color>
+
+
+    <!--HearFragment-->
+    <color name="NearShopItemBg">#f6f6f6</color>
+
+    <color name="MeVipColor">#ffe553</color>
+
+    <!--白色-->
+    <color name="WhiteColor">#ffffff</color>
+    <color name="page_bg">#F5F5F5</color>
+    <color name="SFTXbgColor">#eceff6</color>
+
+    <color name="StoreBgColor">#f2f2f2</color>
+</resources>
