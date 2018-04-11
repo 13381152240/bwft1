@@ -15,18 +15,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
-import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.example.administrator.bwft3.ui.ZhuActivity;
+import com.example.administrator.bwft3.ui.forgetpass.BackPSActivity;
+import com.example.administrator.bwft3.ui.register.RegisterActivity;
 import com.tencent.connect.UserInfo;
 import com.tencent.connect.auth.QQToken;
 import com.tencent.connect.common.Constants;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
 import com.tencent.tauth.UiError;
+import com.vondear.rxtools.RxActivityTool;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -41,7 +43,6 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
     ClearEditText usered;
     @BindView(R.id.passed)
     ClearEditText passed;
-    private PopupWindow popupWindow;
     private static final String TAG = "MainActivity";
     private static final String APP_ID = "1105602574";//官方获取的APPID
     @BindView(R.id.tv_title)
@@ -116,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
         }
     }
 
-    @OnClick({R.id.logQQ, R.id.logWeixin, R.id.logwb, R.id.login,R.id.usered, R.id.passed})
+    @OnClick({R.id.logQQ, R.id.logWeixin, R.id.logwb, R.id.login, R.id.usered, R.id.passed,R.id.forgettv, R.id.regintv})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.logQQ:
@@ -125,6 +126,12 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
                 mTencent.login(MainActivity.this, "all", mIUiListener);
                 break;
             case R.id.logWeixin:
+                break;
+            case R.id.forgettv:
+                RxActivityTool.skipActivity(MainActivity.this, BackPSActivity.class);
+                break;
+            case R.id.regintv:
+                RxActivityTool.skipActivity(MainActivity.this, RegisterActivity.class);
                 break;
             case R.id.logwb:
                 break;

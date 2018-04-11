@@ -7,7 +7,12 @@
 
     <color name="ThemeColor">#e83632</color>
     <color name="ThemeBgColor">#f2f2f2</color>
-
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorRed">#ff0000</color>
+    <color name="colorGray">#ececec</color>
+    <color name="colorButtonGray">#e0e0e0</color>
+    <color name="colorButtonRed">#e60012</color>
+    <color name="colorTextGray">#989898</color>
     <color name="textHintColor">#d1d1d1</color>
 
     <color name="TextColor1">#5f6061</color>

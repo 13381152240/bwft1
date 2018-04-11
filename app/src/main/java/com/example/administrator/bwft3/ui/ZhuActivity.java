@@ -81,7 +81,7 @@ public class ZhuActivity extends AppCompatActivity implements View.OnClickListen
     private void exit() {
 
         if ((System.currentTimeMillis() - mExitTime) > 2000) {
-            Toast.makeText(this, "再按一次退出", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "再按一次退出", Toast.LENGTH_SHORT).show();
             mExitTime = System.currentTimeMillis();
         } else {
             finish();
