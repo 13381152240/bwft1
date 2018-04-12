@@ -38,7 +38,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     private void initSetLogic() {
         Drawable drawable = getResources().getDrawable(R.drawable.ic_bussness_address_down);
-        drawable.setBounds(0, 0, 50, 30);
+        drawable.setBounds(0, 0, 40, 20);
         tv_registerphonenumbercode.setCompoundDrawables(null, null, drawable, null);
         ed_numbercode.addTextChangedListener(editclick);
         ed_phonenumber.addTextChangedListener(editclick);

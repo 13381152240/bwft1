@@ -66,7 +66,6 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
     ImageView logWeixin;
     @BindView(R.id.logwb)
     ImageView logwb;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,7 +76,6 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
         login.setEnabled(false);
         mTencent = Tencent.createInstance(APP_ID, MainActivity.this.getApplicationContext());
         initview();
-
 
     }
 
