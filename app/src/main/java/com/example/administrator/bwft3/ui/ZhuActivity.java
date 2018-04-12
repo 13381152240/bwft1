@@ -61,7 +61,7 @@ public class ZhuActivity extends AppCompatActivity implements View.OnClickListen
         ft.hide(fragmentList.get(2));
         ft.hide(fragmentList.get(3));
 
-        ft.show(fragmentList.get(currentShow = 1));
+        ft.show(fragmentList.get(currentShow = 0));
         btn_store.setSelected(true);
         ft.commit();
     }

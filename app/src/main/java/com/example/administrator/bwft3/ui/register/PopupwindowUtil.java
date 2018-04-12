@@ -5,6 +5,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.PopupWindow;
@@ -46,7 +47,7 @@ public class PopupwindowUtil {
         window.setAttributes(lp);
         popupWindow.setBackgroundDrawable(new BitmapDrawable());
         popupWindow.setContentView(view1);//获取到的布局
-        popupWindow.setHeight(300);
+        popupWindow.setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
         width = context.getWindowManager().getDefaultDisplay().getWidth();
         int i = (int) (width * 0.8);
         popupWindow.setWidth(i);

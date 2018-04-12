@@ -1,4 +1,4 @@
-package com.example.administrator.bwft3;
+package com.example.administrator.bwft3.ImageLoder;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

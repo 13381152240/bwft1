@@ -1,4 +1,4 @@
-package com.example.administrator.bwft3;
+package com.example.administrator.bwft3.ImageLoder;
 
 import android.content.Context;
 import android.graphics.Bitmap;

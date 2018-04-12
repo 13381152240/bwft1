@@ -1,9 +1,6 @@
 apply plugin: 'com.android.application'
 
 android {
-    dataBinding {
-        enabled = true
-    }
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.example.administrator.bwft3"
