@@ -5,6 +5,7 @@
     <!-- 网络权限和判断网络状态权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".app.Mapp"
@@ -15,11 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.ZhuActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
         <activity
@@ -44,7 +41,15 @@
         <activity android:name=".ui.register.RegisterMessageCodActivity" />
         <activity android:name=".ui.register.RegisterPassWordActivity" />
         <activity android:name=".ui.forgetpass.BackPSActivity" />
-        <activity android:name=".ui.forgetpass.BackPSSetPSActivity"></activity>
+        <activity android:name=".ui.forgetpass.BackPSSetPSActivity" />
+        <activity android:name=".ui.guid.GuidActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

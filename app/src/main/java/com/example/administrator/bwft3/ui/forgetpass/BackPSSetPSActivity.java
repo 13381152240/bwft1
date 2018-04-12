@@ -15,7 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.bwft3.R;
-import com.example.administrator.bwft3.ui.register.PopupwindowUtil;
+import com.example.administrator.bwft3.utils.PopupwindowUtil;
 
 public class BackPSSetPSActivity extends AppCompatActivity implements View.OnClickListener{
     private boolean flag2 = false;

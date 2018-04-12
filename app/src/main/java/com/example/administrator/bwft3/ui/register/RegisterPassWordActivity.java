@@ -1,5 +1,6 @@
 package com.example.administrator.bwft3.ui.register;
 
+import android.content.Intent;
 import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -16,9 +17,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.example.administrator.bwft3.MainActivity;
 import com.example.administrator.bwft3.R;
+import com.example.administrator.bwft3.utils.PopupwindowUtil;
 
 public class RegisterPassWordActivity extends AppCompatActivity implements View.OnClickListener{
     private TextView tv_title;
@@ -62,7 +64,8 @@ public class RegisterPassWordActivity extends AppCompatActivity implements View.
                 String s = ed_password.getText().toString();
                 String s1 = ed_passwordagain.getText().toString();
                 if (s.equals(s1)) {
-                    Toast.makeText(this, "登陆成功", Toast.LENGTH_SHORT).show();
+                    Intent intent=new Intent(this,MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
                 } else {
                     PopupwindowUtil popupwindowUtil = new PopupwindowUtil();
                     popupwindowUtil.setPop(this,"提示","两次输入密码不一致");

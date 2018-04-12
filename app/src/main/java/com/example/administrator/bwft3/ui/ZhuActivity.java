@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.administrator.bwft3.MainActivity;
 import com.example.administrator.bwft3.R;
 import com.example.administrator.bwft3.ui.car.ShoppingcarActivity;
 import com.example.administrator.bwft3.ui.me.MeFragment;
@@ -130,6 +131,7 @@ public class ZhuActivity extends AppCompatActivity implements View.OnClickListen
                 ft.show(fragmentList.get(currentShow = 2));
                 break;
             case R.id.btn_me:
+                    RxActivityTool.skipActivity(this, MainActivity.class);
                 ft.show(fragmentList.get(currentShow = 3));
                 break;
             case  R.id.tv_shop_car:

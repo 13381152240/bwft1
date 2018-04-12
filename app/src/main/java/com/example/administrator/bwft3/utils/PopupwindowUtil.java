@@ -1,4 +1,4 @@
-package com.example.administrator.bwft3.ui.register;
+package com.example.administrator.bwft3.utils;
 
 import android.app.Activity;
 import android.graphics.drawable.BitmapDrawable;

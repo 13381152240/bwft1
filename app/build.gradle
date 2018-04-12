@@ -29,5 +29,7 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     compile 'com.github.vondear:RxTools:v1.7.7.1'
     compile 'com.facebook.fresco:fresco:0.14.0'
+    compile 'com.youth.banner:banner:1.4.10'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
 
 }

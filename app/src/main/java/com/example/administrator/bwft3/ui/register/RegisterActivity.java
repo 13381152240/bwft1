@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.bwft3.R;
+import com.example.administrator.bwft3.app.Mapp;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -31,6 +32,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+//        Mapp instance = Mapp.getInstance();
+//        Mapp.addDestoryActivity(this,"registerActivity");
         initView();
         initSetLogic();
 
