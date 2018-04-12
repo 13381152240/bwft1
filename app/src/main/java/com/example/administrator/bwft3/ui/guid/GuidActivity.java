@@ -1,7 +1,5 @@
 package com.example.administrator.bwft3.ui.guid;
 
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -10,17 +8,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
-import com.example.administrator.bwft3.MainActivity;
 import com.example.administrator.bwft3.R;
 import com.example.administrator.bwft3.adapter.GuidAdapter;
 import com.example.administrator.bwft3.ui.ZhuActivity;
 import com.example.administrator.bwft3.utils.ACache;
 import com.vondear.rxtools.RxActivityTool;
 
-import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 

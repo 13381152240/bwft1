@@ -43,7 +43,7 @@
                 android:textColor="@color/textColor2"
                 />
 
-            <com.example.administrator.bwft3.ClearEditText
+            <com.example.administrator.bwft3.utils.ClearEditText
                 android:id="@+id/usered"
                 android:layout_width="match_parent"
                 android:background="@null"
@@ -79,7 +79,7 @@
                 android:textColor="@color/textColor2"
                 />
 
-            <com.example.administrator.bwft3.ClearEditText
+            <com.example.administrator.bwft3.utils.ClearEditText
                 android:id="@+id/passed"
                 android:layout_width="wrap_content"
                 android:background="@null"

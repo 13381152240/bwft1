@@ -17,9 +17,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-
-import com.example.administrator.bwft3.MainActivity;
 import com.example.administrator.bwft3.R;
+import com.example.administrator.bwft3.ui.MainActivity;
 import com.example.administrator.bwft3.utils.PopupwindowUtil;
 
 public class RegisterPassWordActivity extends AppCompatActivity implements View.OnClickListener{

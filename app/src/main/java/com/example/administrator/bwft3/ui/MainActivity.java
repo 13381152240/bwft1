@@ -1,4 +1,4 @@
-package com.example.administrator.bwft3;
+package com.example.administrator.bwft3.ui;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -19,9 +19,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-import com.example.administrator.bwft3.ui.ZhuActivity;
+import com.example.administrator.bwft3.R;
 import com.example.administrator.bwft3.ui.forgetpass.BackPSActivity;
 import com.example.administrator.bwft3.ui.register.RegisterActivity;
+import com.example.administrator.bwft3.utils.ClearEditText;
 import com.tencent.connect.UserInfo;
 import com.tencent.connect.auth.QQToken;
 import com.tencent.connect.common.Constants;
