@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.example.administrator.bwft3.R;
 import com.example.administrator.bwft3.app.Mapp;
+import com.example.administrator.bwft3.utils.Request;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -40,9 +41,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void initSetLogic() {
-        Drawable drawable = getResources().getDrawable(R.drawable.ic_bussness_address_down);
-        drawable.setBounds(0, 0, 40, 20);
-        tv_registerphonenumbercode.setCompoundDrawables(null, null, drawable, null);
+//        Drawable drawable = getResources().getDrawable(R.drawable.ic_bussness_address_down);
+//        drawable.setBounds(0, 0, 40, 20);
+//        tv_registerphonenumbercode.setCompoundDrawables(null, null, drawable, null);
         ed_numbercode.addTextChangedListener(editclick);
         ed_phonenumber.addTextChangedListener(editclick);
 
@@ -105,33 +106,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             if (phonenumber.length() == 11 && numbercode.length() == 4) {
                 but_step.setEnabled(true);
                 but_step.setBackgroundDrawable(getResources().getDrawable(R.drawable.buttonshapered));
-
 //                but_step.setBackgroundColor(Color.parseColor("#e60012"));
             } else {
                 but_step.setEnabled(false);
                 but_step.setBackgroundDrawable(getResources().getDrawable(R.drawable.buttonshapegray));
-
 //                but_step.setBackgroundColor(Color.parseColor("#e0e0e0"));
             }
         }
     };
-
-    private void submit() {
-        // validate
-        String phonenumber = ed_phonenumber.getText().toString().trim();
-        if (TextUtils.isEmpty(phonenumber)) {
-            Toast.makeText(this, "请输入您的手机号", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        String numbercode = ed_numbercode.getText().toString().trim();
-        if (TextUtils.isEmpty(numbercode)) {
-            Toast.makeText(this, "请输入图片验证码", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        // TODO validate success, do something
-
-
-    }
 }

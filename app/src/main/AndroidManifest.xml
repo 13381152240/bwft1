@@ -16,13 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-
         <activity android:name=".ui.ZhuActivity" />
         <activity
             android:name="com.tencent.tauth.AuthActivity"
@@ -48,6 +43,14 @@
         <activity android:name=".ui.forgetpass.BackPSActivity" />
         <activity android:name=".ui.forgetpass.BackPSSetPSActivity" />
         <activity android:name=".ui.guid.GuidActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.TestActivity">
 
 
         </activity>

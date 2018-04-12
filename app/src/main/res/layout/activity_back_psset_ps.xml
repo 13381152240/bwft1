@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:text="新密码"
-            android:textSize="25dp"
+            android:textSize="18dp"
             android:paddingRight="20dp"
             android:layout_height="80dp" />
         <EditText
@@ -30,7 +30,7 @@
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
             android:password="true"
-            android:textSize="25dp" />
+            android:textSize="18dp" />
         <ImageView
             android:id="@+id/setpas_passwordnull"
             android:src="@mipmap/errer3"
@@ -55,7 +55,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:text="重复密码"
-            android:textSize="25dp"
+            android:textSize="18dp"
             android:paddingRight="20dp"
             android:layout_height="80dp" />
         <EditText
@@ -70,7 +70,7 @@
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
             android:password="true"
-            android:textSize="25dp" />
+            android:textSize="18dp" />
         <ImageView
             android:id="@+id/setpas_passwordagainnull"
             android:src="@mipmap/errer3"
@@ -104,7 +104,7 @@
         android:enabled="false"
         android:text="确定"
         android:textColor="@color/colorWhite"
-        android:textSize="25dp" />
+        android:textSize="20dp" />
 
     <TextView
         android:layout_width="match_parent"

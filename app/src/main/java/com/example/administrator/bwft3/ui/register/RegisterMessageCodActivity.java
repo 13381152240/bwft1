@@ -45,6 +45,7 @@ public class RegisterMessageCodActivity extends AppCompatActivity implements Vie
         }
     };
     private ImageView title_return;
+    private String phonenumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +59,7 @@ public class RegisterMessageCodActivity extends AppCompatActivity implements Vie
 
     private void initData() {
         Intent intent = getIntent();
-        String phonenumber = intent.getStringExtra("phonenumber");
+        phonenumber = intent.getStringExtra("phonenumber");
         tv_registerPhoneMessageCode.setText("请输入" + phonenumber + "收到的验证码");
 
         handler.postDelayed(runnable, 0);
@@ -130,8 +131,12 @@ public class RegisterMessageCodActivity extends AppCompatActivity implements Vie
                 break;
             case R.id.but_stepTwo:
                 String s = ed_RefereePhoneNumber.getText().toString();
+                String ss = ed_PhoneMessageCode.getText().toString();
                 if (s.length() == 11 || s.length() == 0) {
                     Intent intent = new Intent(RegisterMessageCodActivity.this, RegisterPassWordActivity.class);
+                    intent.putExtra("phone",phonenumber);
+                    intent.putExtra("code",ss);
+                    intent.putExtra("tuijian",s);
                     startActivity(intent);
                 } else {
                     Toast.makeText(this, "推荐人手机号有误请重新确认", Toast.LENGTH_SHORT).show();

@@ -14,16 +14,16 @@
 
     <ImageView
         android:src="@drawable/back_logon"
-        android:layout_width="wrap_content"
+        android:layout_width="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"
-        android:layout_height="20dp" />
+        android:layout_height="15dp" />
 
     <TextView
         android:id="@+id/tv_title"
         android:text="百望富通登录"
         android:layout_marginTop="10dp"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:gravity="center"
         android:layout_weight="1"
         android:layout_width="match_parent"

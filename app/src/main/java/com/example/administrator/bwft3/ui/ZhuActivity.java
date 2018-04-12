@@ -130,7 +130,7 @@ public class ZhuActivity extends AppCompatActivity implements View.OnClickListen
                 ft.show(fragmentList.get(currentShow = 2));
                 break;
             case R.id.btn_me:
-//                    RxActivityTool.skipActivity(this, MainActivity.class);
+                RxActivityTool.skipActivity(this, MainActivity.class);
                 ft.show(fragmentList.get(currentShow = 3));
                 break;
             case  R.id.tv_shop_car:

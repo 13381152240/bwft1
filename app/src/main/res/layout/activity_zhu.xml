@@ -23,11 +23,13 @@
             android:id="@+id/btn_store"
             style="@style/HomeTabBar"
             android:drawableTop="@drawable/select_tabbar_ic_shop"
+            android:textSize="11dp"
             android:text="商城"/>
 
         <Button
             android:id="@+id/btn_near"
             style="@style/HomeTabBar"
+            android:textSize="11dp"
             android:drawableTop="@drawable/select_tabbar_ic_near"
             android:text="附近"/>
 
@@ -37,13 +39,15 @@
             android:layout_height="match_parent"
             android:layout_marginTop="-20dp"
             android:layout_weight="1"
+            android:text="购物车"
             android:drawableTop="@drawable/tabbar_shopcar"
             android:gravity="center"
-            android:textSize="10sp"/>
+            android:textSize="11dp"/>
 
         <Button
             android:id="@+id/btn_home"
             style="@style/HomeTabBar"
+            android:textSize="11dp"
             android:drawableTop="@drawable/select_tabbar_ic_home"
             android:text="财富"
             android:visibility="visible"/>
@@ -51,6 +55,7 @@
         <Button
             android:id="@+id/btn_me"
             style="@style/HomeTabBar"
+            android:textSize="11dp"
             android:drawableTop="@drawable/select_tabbar_ic_me"
             android:text="个人中心"/>
 

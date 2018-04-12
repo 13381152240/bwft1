@@ -20,7 +20,7 @@
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:password="true"
-        android:textSize="25dp" />
+        android:textSize="18dp" />
 
     <include layout="@layout/layout_xian" />
 
@@ -36,7 +36,7 @@
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:password="true"
-        android:textSize="25dp" />
+        android:textSize="18dp" />
 
     <include layout="@layout/layout_xian" />
 
@@ -56,7 +56,7 @@
         android:enabled="false"
         android:text="立即注册"
         android:textColor="@color/colorWhite"
-        android:textSize="25dp" />
+        android:textSize="20dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -75,6 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="right"
+            android:textSize="13dp"
             android:text="注册代表同意"
             android:textColor="@color/colorTextGray" />
 
@@ -83,6 +84,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textSize="13dp"
             android:autoLink="all"
             android:text="《消费者注册协议》" />
     </LinearLayout>
