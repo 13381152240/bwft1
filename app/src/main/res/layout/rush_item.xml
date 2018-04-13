@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:paddingLeft="8dp"
+    android:paddingBottom="17dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/rush_img"
+        android:layout_marginTop="14dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:padding="6dp"
+        fresco:placeholderImage="@drawable/picloaderr"/>
+    
+    
+    <TextView
+        android:id="@+id/shop_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:text="@string/zhanwei2"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/now_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="$999.0"
+        android:layout_gravity="center"
+        android:textColor="#e60012"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/past_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:textColor="#999999"
+        android:text="原价:$10000.0"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        />
+
+
+
+</LinearLayout>

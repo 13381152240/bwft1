@@ -15,10 +15,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.MainActivity">
+        <activity android:name=".ui.ZhuActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".ui.ZhuActivity" />
+        <activity android:name=".ui.MainActivity" />
         <activity
             android:name="com.tencent.tauth.AuthActivity"
             android:launchMode="singleTask"
@@ -44,16 +48,14 @@
         <activity android:name=".ui.forgetpass.BackPSSetPSActivity" />
         <activity android:name=".ui.guid.GuidActivity">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".ui.TestActivity">
 
 
         </activity>
+        <meta-data android:name="android.max_aspect" android:value="ratio_float"/>
+
     </application>
 
 </manifest>
