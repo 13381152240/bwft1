@@ -2,6 +2,7 @@ package com.example.administrator.bwft3.app;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 
@@ -15,11 +16,17 @@ import java.util.Set;
 
 public class Mapp extends Application{
     private static Mapp mapp;
+    private static Mapp context;
     @Override
     public void onCreate() {
         super.onCreate();
         Fresco.initialize(this);
+        this.context = this;
     }
+    public static Context context(){
+        return context;
+    }
+
     private static Map<String,Activity> destoryMap = new HashMap<>();
 
 //    private Mapp() {
