@@ -21,6 +21,7 @@ import android.widget.ToggleButton;
 
 import com.example.administrator.bwft3.R;
 import com.example.administrator.bwft3.ui.forgetpass.BackPSActivity;
+import com.example.administrator.bwft3.ui.forgetpass.BackPSPhoneActivity;
 import com.example.administrator.bwft3.ui.register.RegisterActivity;
 import com.example.administrator.bwft3.utils.ClearEditText;
 import com.tencent.connect.UserInfo;
@@ -127,7 +128,7 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
             case R.id.logWeixin:
                 break;
             case R.id.forgettv:
-                RxActivityTool.skipActivity(MainActivity.this, BackPSActivity.class);
+                RxActivityTool.skipActivity(MainActivity.this, BackPSPhoneActivity.class);
                 break;
             case R.id.regintv:
                 RxActivityTool.skipActivity(MainActivity.this, RegisterActivity.class);
