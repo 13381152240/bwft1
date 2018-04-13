@@ -1,10 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/near_tittleimage"
+            android:layout_width="match_parent"
+            android:background="@mipmap/ic_launcher"
+            android:layout_height="306dp" />
+        <LinearLayout
+            android:layout_marginTop="27dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout_title">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginLeft="15dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp" />
+            <TextView
+                android:text="北京"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="wrap_content"
+                android:textSize="14dp"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:layout_height="30dp">
+                <ImageView
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="14dp"
+                    android:layout_height="16dp" />
+                <TextView
+                    android:text="请输入商品名称"
+                    android:layout_gravity="center"
+                    android:background="#ececec"
+                    android:textSize="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <ImageView
+                android:layout_marginLeft="16dp"
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginRight="16dp"
+                android:layout_gravity="center"
+                android:layout_width="16dp"
+                android:layout_height="16dp" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyc_near"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/linearLayout_title"
+            android:layout_marginTop="210dp">
+        </android.support.v7.widget.RecyclerView>
+        <LinearLayout
+            android:id="@+id/linearLayout_gg"
+            android:layout_below="@id/recyc_near"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="40dp">
+            <TextView
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="11dp"
+                android:text="商城公告"
+                android:textSize="13sp"
+                android:layout_width="28dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="|"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="11dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="12dp"
+                    android:text="百望富通即将上线，敬请期待"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="12dp"
+                    android:text="消费变投资，花钱美滋滋，花本该花的钱"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/linearLayout_gg"
+            android:layout_height="238dp" >
+
+            <ImageView
+                android:id="@+id/image_tu1"
+                android:layout_width="173dp"
+                android:layout_height="225dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/fengjing"
+                android:layout_margin="20dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/image_tu1"
+
+                >
 
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toLeftOf="@id/image_tu1"
+                android:layout_weight="1"
+                android:layout_marginTop="22dp"
+                android:layout_alignTop="@+id/image_tu1"
+                android:background="@drawable/fengjing" />
 
-</LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignBottom="@+id/image_tu1"
+                android:layout_toEndOf="@+id/image_tu1"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:layout_toRightOf="@+id/image_tu1"
+                android:background="@drawable/fengjing" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

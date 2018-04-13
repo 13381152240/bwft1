@@ -13,6 +13,7 @@
         android:layout_height="20dp" />
 
     <TextView
+        android:layout_marginLeft="20dp"
         android:id="@+id/tv_registerPhoneMessageCode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,6 +25,7 @@
         android:layout_height="80dp">
 
         <EditText
+            android:layout_marginLeft="20dp"
             android:id="@+id/ed_PhoneMessageCode"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -65,6 +67,7 @@
         android:layout_height="20dp" />
 
     <EditText
+        android:layout_marginLeft="20dp"
         android:id="@+id/ed_RefereePhoneNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

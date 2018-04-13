@@ -13,6 +13,7 @@
         android:orientation="horizontal"
         android:layout_height="wrap_content">
         <TextView
+            android:layout_marginLeft="20dp"
             android:layout_width="wrap_content"
             android:text="新密码"
             android:textSize="18dp"
@@ -40,7 +41,7 @@
             android:layout_height="80dp" />
         <ImageView
             android:id="@+id/setpas_passwordsee"
-            android:src="@mipmap/see3"
+            android:src="@mipmap/nosee3"
             android:paddingRight="20dp"
             android:layout_width="wrap_content"
             android:layout_height="80dp" />
@@ -53,6 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
+            android:layout_marginLeft="20dp"
             android:layout_width="wrap_content"
             android:text="重复密码"
             android:textSize="18dp"
@@ -80,7 +82,7 @@
             android:layout_height="80dp" />
         <ImageView
             android:id="@+id/setpas_passwordagainsee"
-            android:src="@mipmap/see3"
+            android:src="@mipmap/nosee3"
             android:paddingRight="20dp"
             android:layout_width="wrap_content"
             android:layout_height="80dp" />

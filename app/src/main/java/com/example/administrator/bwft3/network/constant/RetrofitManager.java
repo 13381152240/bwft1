@@ -7,7 +7,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitManager {
     private Retrofit mRetrofit;
     private static final String DEFUALT_BASE_URL = "http://lw.xiandouxian.cn/index.php/Api/";
-    public static final String LOGIN="Pub/login";
     //一种单例模式
     private static class SingleHolder {
         private static final RetrofitManager _instance = new RetrofitManager(DEFUALT_BASE_URL);

@@ -7,6 +7,8 @@ package com.example.administrator.bwft3.network.constant;
 public class UrlUtils {
     //登录
     public static final String LOGIN="Pub/login";
+    //注册
+    public static final String REG="Pub/reg";
 
 
 }

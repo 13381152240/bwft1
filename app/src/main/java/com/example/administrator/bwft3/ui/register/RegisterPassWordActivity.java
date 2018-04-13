@@ -1,45 +1,31 @@
 package com.example.administrator.bwft3.ui.register;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.bwft3.R;
 import com.example.administrator.bwft3.entity.RegisBean;
 import com.example.administrator.bwft3.ui.MainActivity;
-import com.example.administrator.bwft3.utils.BasecallBack;
+import com.example.administrator.bwft3.ui.presenter.IPrestenerReg;
+import com.example.administrator.bwft3.ui.view.IR;
 import com.example.administrator.bwft3.utils.PopupwindowUtil;
-import com.example.administrator.bwft3.utils.Request;
-import com.example.administrator.bwft3.utils.Util;
-import com.google.gson.Gson;
 
-import java.io.IOException;
-
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.FormBody;
-import okhttp3.OkHttpClient;
-import okhttp3.Response;
-
-public class RegisterPassWordActivity extends AppCompatActivity implements View.OnClickListener{
+public class RegisterPassWordActivity extends AppCompatActivity implements View.OnClickListener,IR{
     private TextView tv_title;
     private EditText ed_password;
     private EditText ed_passwordagain;
@@ -50,15 +36,6 @@ public class RegisterPassWordActivity extends AppCompatActivity implements View.
     private String phone;
     private String code;
     private String tuijian;
-    private String string;
-    private Handler handler=new Handler(){
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-
-        }
-    };
-    private RegisBean regisBean;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,8 +50,6 @@ public class RegisterPassWordActivity extends AppCompatActivity implements View.
         phone = intent.getStringExtra("phone");
         code = intent.getStringExtra("code");
         tuijian = intent.getStringExtra("tuijian");
-
-
     }
 
 
@@ -103,44 +78,8 @@ public class RegisterPassWordActivity extends AppCompatActivity implements View.
                 String s = ed_password.getText().toString();
                 String s1 = ed_passwordagain.getText().toString();
                 if (s.equals(s1)) {
-//                    Request request = new Request();
-//                    String s2 = request.initOK("http://lw.xiandouxian.cn/index.php/Api/Pub/reg", phone, s, s1, code, tuijian);
-//                    Log.e("aaa",s2);
-                    FormBody.Builder form = new FormBody.Builder();
-                    form.add("phone",phone);
-                    form.add("password1",s);
-                    form.add("password2",s1);
-                    form.add("code",code);
-                    form.add("tuijian",tuijian);
-                    Util.getDataInPost("http://lw.xiandouxian.cn/index.php/Api/Pub/reg", form.build(), new BasecallBack() {
-                        @Override
-                        public void successsful(final String message) {
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    Gson gson=new Gson();
-                                    regisBean = gson.fromJson(message, RegisBean.class);
-                                    int status = regisBean.getStatus();
-                                    if(status == 1){
-                                        Toast.makeText(RegisterPassWordActivity.this, regisBean.getMsg(), Toast.LENGTH_SHORT).show();
-                                        Intent intent=new Intent(RegisterPassWordActivity.this,MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                                        startActivity(intent);
-                                    }else {
-                                        Toast.makeText(RegisterPassWordActivity.this, "注册失败"+regisBean.getMsg(), Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                            });
-                        }
-
-                        @Override
-                       public void fuildye(String error) {
-
-                        }
-                    });
-
-//                    Log.e("aaa",regisBean.toString());
-
-
+                    IPrestenerReg iPrestenerReg=new IPrestenerReg(this);
+                    iPrestenerReg.getlogin(phone,s,s1,code,tuijian);
                 } else {
                     PopupwindowUtil popupwindowUtil = new PopupwindowUtil();
                     popupwindowUtil.setPop(this,"提示","两次输入密码不一致");
@@ -152,16 +91,6 @@ public class RegisterPassWordActivity extends AppCompatActivity implements View.
                 break;
         }
     }
-
-    private PopupWindow.OnDismissListener mDismissListener = new PopupWindow.OnDismissListener() {
-        @Override
-        public void onDismiss() {
-            WindowManager.LayoutParams lp = getWindow().getAttributes();
-            lp.alpha = 1.0f;
-            getWindow().setAttributes(lp);
-        }
-
-    };
 
     public void isChecket(final EditText ed) {
         ed.setOnTouchListener(new View.OnTouchListener() {
@@ -222,4 +151,25 @@ public class RegisterPassWordActivity extends AppCompatActivity implements View.
             }
         }
     };
+
+    @Override
+    public Context context() {
+        return this;
+    }
+
+    @Override
+    public void getReg(RegisBean regisBean) {
+        if(regisBean.getStatus() == 1){
+            Toast.makeText(RegisterPassWordActivity.this, regisBean.getMsg(), Toast.LENGTH_SHORT).show();
+            Intent intent=new Intent(RegisterPassWordActivity.this,MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }else {
+            Toast.makeText(RegisterPassWordActivity.this, "注册失败"+regisBean.getMsg(), Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    public void regFaid() {
+
+    }
 }

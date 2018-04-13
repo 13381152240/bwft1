@@ -80,18 +80,22 @@ public class BackPSSetPSActivity extends AppCompatActivity implements View.OnCli
                 if (flag2 == false) {
                     flag2 = true;
                     setpas_password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    setpas_passwordsee.setImageResource(R.mipmap.see3);
                 } else {
                     flag2 = false;
                     setpas_password.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    setpas_passwordsee.setImageResource(R.mipmap.nosee3);
                 }
                 break;
             case R.id.setpas_passwordagainsee:
                 if (flag3 == false) {
                     flag3 = true;
                     setpas_passwordagain.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    setpas_passwordagainsee.setImageResource(R.mipmap.see3);
                 } else {
                     flag3 = false;
                     setpas_passwordagain.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    setpas_passwordagainsee.setImageResource(R.mipmap.nosee3);
                 }
                 break;
             case R.id.title_return:

@@ -9,11 +9,13 @@
         android:layout_width="match_parent"
         android:layout_height="20dp" />
     <TextView
+        android:layout_marginLeft="20dp"
         android:text="我们已经将您的验证码发送至你的手机"
         android:textSize="18dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <TextView
+        android:layout_marginLeft="20dp"
         android:id="@+id/backps_phonenumber"
         android:textSize="18dp"
         android:text="xxxxxxxxxxxxxxx"
@@ -31,6 +33,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginLeft="20dp"
             android:background="#00000000"
             android:digits="1234567890"
             android:gravity="center|left"

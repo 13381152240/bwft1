@@ -9,12 +9,13 @@
     <include layout="@layout/layout_xian" />
 
     <EditText
+        android:layout_marginLeft="20dp"
         android:id="@+id/ed_password"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="#00000000"
         android:digits="1234567890abcdefghijklmnopqrstuvwxyz.+-*ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        android:drawableRight="@mipmap/see3"
+        android:drawableRight="@mipmap/nosee3"
         android:gravity="center|left"
         android:hint="登录密码"
         android:paddingLeft="15dp"
@@ -25,12 +26,13 @@
     <include layout="@layout/layout_xian" />
 
     <EditText
+        android:layout_marginLeft="20dp"
         android:id="@+id/ed_passwordagain"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="#00000000"
         android:digits="1234567890abcdefghijklmnopqrstuvwxyz.+-*ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        android:drawableRight="@mipmap/see3"
+        android:drawableRight="@mipmap/nosee3"
         android:gravity="center|left"
         android:hint="确认登录密码"
         android:paddingLeft="15dp"

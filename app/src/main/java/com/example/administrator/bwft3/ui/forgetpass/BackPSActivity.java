@@ -52,10 +52,9 @@ public class BackPSActivity extends AppCompatActivity implements View.OnClickLis
 
     private void initData() {
         tv_title.setText("找回密码");
-//        Intent intent = getIntent();
-//        String number = intent.getStringExtra("number");
-//        backps_phonenumber.setText(number);
-        backps_phonenumber.setText("11111111111");
+        Intent intent = getIntent();
+        String number = intent.getStringExtra("number");
+        backps_phonenumber.setText(number);
 
         handler.postDelayed(runnable, 0);
         backps_sendCodeAgain.setText("重新发送（120）");
