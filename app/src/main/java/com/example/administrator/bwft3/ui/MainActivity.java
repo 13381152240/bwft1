@@ -1,9 +1,10 @@
 package com.example.administrator.bwft3.ui;
 
-import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -19,12 +20,9 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.example.administrator.bwft3.R;
-import com.example.administrator.bwft3.entity.LoginBean;
-import com.example.administrator.bwft3.ui.presenter.LoginPresenter;
+import com.example.administrator.bwft3.ui.forgetpass.BackPSActivity;
 import com.example.administrator.bwft3.ui.register.RegisterActivity;
-import com.example.administrator.bwft3.ui.view.IL;
 import com.example.administrator.bwft3.utils.ClearEditText;
-import com.example.administrator.bwft3.utils.PopupwindowUtil;
 import com.tencent.connect.UserInfo;
 import com.tencent.connect.auth.QQToken;
 import com.tencent.connect.common.Constants;
@@ -40,7 +38,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity implements TextWatcher,IL {
+public class MainActivity extends AppCompatActivity implements TextWatcher {
 
     @BindView(R.id.usered)
     ClearEditText usered;
@@ -69,9 +67,6 @@ public class MainActivity extends AppCompatActivity implements TextWatcher,IL {
     ImageView logWeixin;
     @BindView(R.id.logwb)
     ImageView logwb;
-    String user;
-    String pass;
-    private LoginPresenter loginPresenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,9 +77,6 @@ public class MainActivity extends AppCompatActivity implements TextWatcher,IL {
         login.setEnabled(false);
         mTencent = Tencent.createInstance(APP_ID, MainActivity.this.getApplicationContext());
         initview();
-        //实例化p层
-        loginPresenter = new LoginPresenter(this);
-
 
     }
 
@@ -120,8 +112,7 @@ public class MainActivity extends AppCompatActivity implements TextWatcher,IL {
     public void afterTextChanged(Editable s) {
         if (!(passed.getText().toString().equals(""))) {
             login.setEnabled(true);
-            login.setBackgroundDrawable(getResources().getDrawable(R.drawable.buttonshapered));
-
+            login.setBackgroundColor(Color.RED);
         }
     }
 
@@ -136,7 +127,7 @@ public class MainActivity extends AppCompatActivity implements TextWatcher,IL {
             case R.id.logWeixin:
                 break;
             case R.id.forgettv:
-                //RxActivityTool.skipActivity(MainActivity.this, BackPSPhoneActivity.class);
+                RxActivityTool.skipActivity(MainActivity.this, BackPSActivity.class);
                 break;
             case R.id.regintv:
                 RxActivityTool.skipActivity(MainActivity.this, RegisterActivity.class);
@@ -144,44 +135,34 @@ public class MainActivity extends AppCompatActivity implements TextWatcher,IL {
             case R.id.logwb:
                 break;
             case R.id.login:
-                user = usered.getText().toString().trim();
-                pass = passed.getText().toString().trim();
+                String logpass = this.passed.getText().toString();
+                if (logpass.length() < 6) {
+                    View aalayout = View.inflate(MainActivity.this, R.layout.alert, null);
+                    final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);//MainActivity.this为当前环境
+//                    builder.setIcon(android.R.drawable.ic_dialog_info);//提示图标
+//
+//                    builder.setTitle("登录失败");//提示框标题
+//                    builder.setMessage("账号或密码错误,请重新输入");//提示内容
+//
+                    builder.setPositiveButton(R.string.sure, null);
+                    //builder.setPositiveButton(R.string.sure,null);
 
-                loginPresenter.getlogin(user,pass);
+                    builder.setCancelable(true);
+                    builder.setView(aalayout);
+
+                    builder.create().show();
+
+                } else {
+                    startActivity(new Intent(MainActivity.this, ZhuActivity.class));
+                }
+
+                break;
+            case R.id.usered:
+                break;
+            case R.id.passed:
                 break;
 
         }
-}
-
-    @Override
-    public Context context() {
-        return this;
-    }
-
-    @Override
-    public void getlogin(LoginBean loginBean) {
-        if(loginBean.getStatus()==1){
-            Toast.makeText(this,loginBean.getMsg(),Toast.LENGTH_LONG).show();
-            RxActivityTool.skipActivity(this,ZhuActivity.class);
-        }else{
-//            View aalayout = View.inflate(MainActivity.this, R.layout.alert, null);
-//            final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);//MainActivity.this为当前环境
-//            builder.setPositiveButton(R.string.sure, null);
-//            builder.setCancelable(true);
-//            builder.setView(aalayout);
-//            builder.create().show();
-            PopupwindowUtil popupwindowUtil = new PopupwindowUtil();
-            popupwindowUtil.setPop(this,"登录失败","账号或密码错误,请重新输入");
-
-            Toast.makeText(this,loginBean.getMsg(),Toast.LENGTH_LONG).show();
-        }
-
-
-    }
-
-    @Override
-    public void registerFaid() {
-
     }
 
 
