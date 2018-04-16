@@ -366,7 +366,7 @@
             android:id="@+id/rlv_rush"
             android:layout_width="match_parent"
             android:layout_marginLeft="16dp"
-            android:layout_height="@dimen/x170">
+            android:layout_height="@dimen/x175">
 
         </android.support.v7.widget.RecyclerView>
 

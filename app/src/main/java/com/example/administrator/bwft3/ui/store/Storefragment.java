@@ -3,6 +3,7 @@ package com.example.administrator.bwft3.ui.store;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -51,18 +52,21 @@ public class Storefragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         ImageHelper imageHelper = new ImageHelper(getActivity());
+        LinearLayoutManager ms= new LinearLayoutManager(getActivity());
+        ms.setOrientation(LinearLayoutManager.HORIZONTAL);// 设置 recyclerview 布局方式为横向布局
         imageHelper.display(bann, url1);
         dataList = new ArrayList<>();
         for (int i = 0; i < 40; i++) {
             DataBean data = new DataBean("叶应是叶", "999.00");
             dataList.add(data);
         }
-        rlv_rush.setLayoutManager(new LinearLayoutManager(getActivity()));
+        rlv_rush.setLayoutManager(new GridLayoutManager(getActivity(),3));
+        rlv_rush.setLayoutManager(ms);
         rushAdapter = new RushAdapter(getActivity(),dataList);
         Log.e("aaa",dataList.size()+"");
         rlv_rush.setAdapter(rushAdapter);
         //解决RecyclerView的滑动冲突
-        rlv_rush.setNestedScrollingEnabled(false);
+        rlv_rush.setNestedScrollingEnabled(true);
 
     }
 
