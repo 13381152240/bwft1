@@ -54,7 +54,7 @@ public class Storefragment extends Fragment {
         imageHelper.display(bann, url1);
         dataList = new ArrayList<>();
         for (int i = 0; i < 40; i++) {
-            DataBean data = new DataBean("叶应是叶", "我也不知道说什么好，我也不知道说什么好，我也不知道说什么好，我也不知道说什么好");
+            DataBean data = new DataBean("叶应是叶", "999.00");
             dataList.add(data);
         }
         rlv_rush.setLayoutManager(new LinearLayoutManager(getActivity()));
