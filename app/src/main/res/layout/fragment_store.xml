@@ -366,7 +366,7 @@
             android:id="@+id/rlv_rush"
             android:layout_width="match_parent"
             android:layout_marginLeft="16dp"
-            android:layout_height="@dimen/x211">
+            android:layout_height="@dimen/x170">
 
         </android.support.v7.widget.RecyclerView>
 
@@ -492,7 +492,14 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#ff5000"
                 android:textSize="15sp" />
-
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="40dip"
+                android:layout_height="1dip"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tv1"
+                android:background="#b6b6b6"
+                android:text="." />
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="40dip"

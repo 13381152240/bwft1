@@ -1,6 +1,7 @@
 package com.example.administrator.bwft3.ui.store;
 
 import android.content.Context;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +23,7 @@ public class RushAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     private Context context;
     private List<DataBean> list;
     private LayoutInflater inflater;
+    private Uri uri = Uri.parse("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524459961&di=1f75ac9faacf8d369462c0a66e951479&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F110725%2F2893-110H5120H618.jpg");
 
     public RushAdapter(Context context, List<DataBean> list) {
         this.context = context;
@@ -43,7 +45,7 @@ public class RushAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
         MyViewHolder myViewHolder = (MyViewHolder) holder;
         myViewHolder.shop_name.setText(dataBean.getTitle());
         myViewHolder.price.setText(dataBean.getContent());
-
+        myViewHolder.rush_img.setImageURI(uri);
 
     }
 
